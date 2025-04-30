@@ -1,5 +1,5 @@
 import 'package:bookly/Core/Utils/Api_Service.dart';
-import 'package:bookly/Features/home/Data/Repo/Home_Repo_Implementation.dart';
+import 'package:bookly/Features/home/Domain/Repo/Home_Repo_Implementation.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
