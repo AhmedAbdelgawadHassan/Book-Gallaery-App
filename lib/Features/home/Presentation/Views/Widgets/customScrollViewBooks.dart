@@ -8,32 +8,27 @@ class Customscrollviewbooks extends StatelessWidget {
   const Customscrollviewbooks({super.key});
 
   @override
-
   Widget build(BuildContext context) {
-    return  CustomScrollView(
+    return CustomScrollView(
       slivers: [
+        SliverToBoxAdapter(child: customAppBar()),
+        SliverToBoxAdapter(child: Featuredbookslistview()),
+        SliverToBoxAdapter(child: SizedBox(height: 50),),
         SliverToBoxAdapter(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              customAppBar(),
-              Featuredbookslistview(),
-              SizedBox(height: 40),
-              Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Text("Newest Books", style: AppStyles.textStyle18.copyWith(
-                  fontSize: 22,
-                  fontFamily: "times new roman"
-                )),
+          child: Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              "Newest Books",
+              style: AppStyles.textStyle18.copyWith(
+                fontSize: 22,
+                fontFamily: "times new roman",
               ),
-              SizedBox(height: 30),
-            ],
+              
+            ),
           ),
         ),
-        SliverFillRemaining(
-          // make child take the free space in button for screen
-          child: NewestBooksListView(),
-        ),
+         SliverToBoxAdapter(child: SizedBox(height: 10),),
+        SliverToBoxAdapter(child: NewestBooksListView()),
       ],
     );
   }

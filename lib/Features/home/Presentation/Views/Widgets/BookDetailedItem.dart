@@ -9,7 +9,7 @@ class BookDetialedItem extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.42,
       height: MediaQuery.of(context).size.height * 0.35,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(12),
         image: DecorationImage(
           fit: BoxFit.fill,
           image: AssetImage("assets/images/Screenshot 2024-12-06 121034.png"),

@@ -7,6 +7,7 @@ class NewestBooksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      itemCount: 20,
       padding:
           EdgeInsets
               .zero, // ListView.builder is default take a padding vertical so this line remove default padding
